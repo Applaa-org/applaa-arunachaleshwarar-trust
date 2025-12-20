@@ -1,4 +1,4 @@
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X, Heart, Shield } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from './ui/button';
 
@@ -59,6 +59,15 @@ export default function Header() {
               className="text-gray-700 hover:text-rose-600 transition-colors font-medium"
             >
               Contact
+            </a>
+            {/* Admin Panel Link */}
+            <a 
+              href="/admin" 
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium flex items-center"
+              title="Admin Panel"
+            >
+              <Shield className="w-4 h-4 mr-1" />
+              Admin
             </a>
           </nav>
 
@@ -126,6 +135,33 @@ export default function Header() {
             >
               Contact
             </a>
+            {/* Admin Panel Link - Mobile */}
+            <a 
+              href="/admin" 
+              className="block py-2 text-purple-700 hover:text-purple-900 transition-colors font-medium flex items-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <Shield className="w-4 h-4 mr-2" />
+              Admin Panel
+            </a>
+            {/* Dashboards */}
+            <div className="pt-4 border-t mt-4">
+              <p className="text-xs text-gray-500 mb-2">User Dashboards</p>
+              <a 
+                href="/dashboard/donor" 
+                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors text-sm"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Donor Dashboard
+              </a>
+              <a 
+                href="/dashboard/volunteer" 
+                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors text-sm"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Volunteer Dashboard
+              </a>
+            </div>
           </nav>
         )}
       </div>
