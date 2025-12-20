@@ -2,51 +2,6 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Heart, TrendingUp, Award } from 'lucide-react';
-
-const Impact = () => {
-  const stories = [
-    {
-      title: "From Hunger to Hope: Priya's Story",
-      location: "Bangalore Rural",
-      date: "Dec 2023",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop",
-      excerpt: "When COVID hit, we didn't know where our next meal would come from. Hope Foundation's food distribution program saved our family..."
-    },
-    {
-      title: "Education Changed Everything: Rahul's Journey",
-      location: "Mumbai",
-      date: "Nov 2023",
-      image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&h=600&fit=crop",
-      excerpt: "Thanks to the Back to School program, I received books and uniform. Now I'm the first in my family to go to college..."
-    },
-    {
-      title: "A Second Chance at Life: Medical Camp Success",
-      location: "Delhi",
-      date: "Oct 2023",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
-      excerpt: "The free medical camp detected my diabetes early. I received treatment and medicine. Today, I'm healthy and working again..."
-    <dyad-problem-report summary="13 problems">
-<problem file="src/App.tsx" line="21" column="20" code="2307">Cannot find module './pages/Impact' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="22" column="23" code="2307">Cannot find module './pages/Volunteer' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="23" column="18" code="2307">Cannot find module './pages/News' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="24" column="21" code="2307">Cannot find module './pages/Contact' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="25" column="21" code="2307">Cannot find module './pages/Gallery' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="28" column="28" code="2307">Cannot find module './pages/dashboard/DonorDashboard' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="29" column="32" code="2307">Cannot find module './pages/dashboard/VolunteerDashboard' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="32" column="28" code="2307">Cannot find module './pages/admin/AdminDashboard' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="33" column="28" code="2307">Cannot find module './pages/admin/AdminDonations' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="34" column="28" code="2307">Cannot find module './pages/admin/AdminCampaigns' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="35" column="32" code="2307">Cannot find module './pages/admin/AdminBeneficiaries' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="36" column="29" code="2307">Cannot find module './pages/admin/AdminCompliance' or its corresponding type declarations.</problem>
-<problem file="src/App.tsx" line="37" column="26" code="2307">Cannot find module './pages/admin/AdminReports' or its corresponding type declarations.</problem>
-</dyad-problem-report>I'll create all the missing page files to fix these TypeScript errors:
-
-<applaa-write path="src/pages/Impact.tsx" description="Complete Impact stories page">
-import Header from '@/components/header';
-import Footer from '@/components/footer';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Users, Heart, TrendingUp, Award, MapPin, Calendar } from 'lucide-react';
 
@@ -92,7 +47,6 @@ const Impact = () => {
     <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-purple-50">
       <Header />
 
-      {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-r from-rose-600 to-purple-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -109,7 +63,6 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Impact Statistics */}
       <section className="py-12 bg-white shadow-lg">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -129,7 +82,6 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Success Stories */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
