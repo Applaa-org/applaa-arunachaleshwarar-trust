@@ -99,16 +99,17 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                {/* High quality Tamil Nadu Temple Gopuram image */}
+                {/* Arunachaleshwarar Temple Gopuram - Thiruvannamalai */}
                 <img 
-                  src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop" 
-                  alt="Colorful South Indian Temple Gopuram - Thiruvannamalai Arunachaleshwarar Temple"
+                  src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&h=600&fit=crop" 
+                  alt="Arunachaleshwarar Temple Gopuram - திருவண்ணாமலை அருணாசலேஸ்வரர் கோவில்"
                   className="w-full h-[400px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="text-xl font-bold mb-1">Arunachaleshwarar Temple</p>
-                  <p className="text-sm opacity-90">திருவண்ணாமலை - Sacred abode of Lord Shiva</p>
+                  <p className="text-xl font-bold mb-1">அருணாசலேஸ்வரர் கோவில்</p>
+                  <p className="text-sm opacity-90">Arunachaleshwarar Temple • திருவண்ணாமலை</p>
+                  <p className="text-xs opacity-80 mt-1">One of the Pancha Bhoota Sthalams - Sacred Fire Temple</p>
                 </div>
               </div>
               {/* Floating Stats */}
