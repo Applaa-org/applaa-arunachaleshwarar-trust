@@ -99,9 +99,10 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                {/* High quality Tamil Nadu Temple Gopuram image */}
                 <img 
-                  src="https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800&h=600&fit=crop" 
-                  alt="South Indian Hindu Temple with colorful gopuram"
+                  src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop" 
+                  alt="Colorful South Indian Temple Gopuram - Thiruvannamalai Arunachaleshwarar Temple"
                   className="w-full h-[400px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
