@@ -22,31 +22,6 @@ export type ProgramStatus =
   | 'paused' 
   | 'cancelled';
 
-export type DonationType = 'one-time' | 'monthly' | 'quarterly' | 'yearly';<applaa-write path="src/types/database.types.ts" description="TypeScript types for database schema - CONTINUED">
-// ============================================
-// DATABASE TYPES - TypeScript Interfaces
-// Auto-generated from PostgreSQL schema
-// ============================================
-
-export type UserRole = 'donor' | 'volunteer' | 'admin' | 'beneficiary' | 'trustee';
-
-export type ProgramCategory = 
-  | 'education' 
-  | 'food' 
-  | 'healthcare' 
-  | 'shelter' 
-  | 'emergency' 
-  | 'women_empowerment' 
-  | 'child_welfare';
-
-export type ProgramStatus = 
-  | 'draft' 
-  | 'ongoing' 
-  | 'completed' 
-  | 'upcoming' 
-  | 'paused' 
-  | 'cancelled';
-
 export type DonationType = 'one-time' | 'monthly' | 'quarterly' | 'yearly';
 
 export type PaymentMethod = 
@@ -757,22 +732,3 @@ export interface ApiErrorResponse {
   errors?: Record<string, string[]>;
   status_code: number;
 }
-
-// ============================================
-// EXPORT ALL TYPES
-// ============================================
-
-export type {
-  User,
-  Program,
-  Donation,
-  Beneficiary,
-  VolunteerProfile,
-  Expense,
-  TaxReceipt,
-  ComplianceDocument,
-  AuditLog,
-  EmailLog,
-  Testimonial,
-  BlogPost
-};
