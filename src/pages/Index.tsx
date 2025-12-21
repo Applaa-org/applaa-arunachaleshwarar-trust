@@ -9,10 +9,8 @@ import { Badge } from '@/components/ui/badge';
 const Index = () => {
   const featuredPrograms = programs.filter(p => p.status === 'ongoing').slice(0, 3);
   
-  // USING LOCAL IMAGE FROM PUBLIC FOLDER
-  // Once you upload your temple image to /public folder as 'arunachaleshwarar-temple.jpg'
-  // it will automatically display here
-  const templeImageUrl = "/arunachaleshwarar-temple.jpg";
+  // Using your Thiruvannamalai Gopuram image from public folder
+  const templeImageUrl = "/arunachaleshwarar-temple.jpeg";
   
   const stats = [
     { icon: Users, label: 'Lives Impacted', value: '10,234', color: 'text-orange-600', gradient: 'from-orange-500 to-red-500' },
@@ -104,13 +102,6 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                {/* 
-                  YOUR ARUNACHALESHWARAR TEMPLE IMAGE
-                  Steps to add your image:
-                  1. Save your Pinterest image as 'arunachaleshwarar-temple.jpg'
-                  2. Put it in the 'public' folder of your project
-                  3. Refresh the page - it will show automatically!
-                */}
                 <img 
                   src={templeImageUrl}
                   alt="Arunachaleshwarar Temple Gopuram - திருவண்ணாமலை அருணாசலேஸ்வரர் கோவில்"
