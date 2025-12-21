@@ -36,6 +36,7 @@ import AdminPrograms from "./pages/admin/AdminPrograms";
 import AdminBeneficiaries from "./pages/admin/AdminBeneficiaries";
 import AdminCompliance from "./pages/admin/AdminCompliance";
 import AdminReports from "./pages/admin/AdminReports";
+import AdminGallery from "./pages/admin/AdminGallery";
 
 const queryClient = new QueryClient();
 
@@ -175,6 +176,12 @@ const adminReportsRoute = createTanStackRoute({
   component: AdminReports,
 })
 
+const adminGalleryRoute = createTanStackRoute({
+  getParentRoute: () => rootRoute,
+  path: '/admin/gallery',
+  component: AdminGallery,
+})
+
 // Create route tree
 const routeTree = rootRoute.addChildren([
   indexRoute,
@@ -197,6 +204,7 @@ const routeTree = rootRoute.addChildren([
   adminBeneficiariesRoute,
   adminComplianceRoute,
   adminReportsRoute,
+  adminGalleryRoute,
 ])
 
 // Create router with proper TypeScript configuration

@@ -2,11 +2,12 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { DollarSign, Users, TrendingUp, Activity, Shield, BarChart } from 'lucide-react';
+import { DollarSign, Users, TrendingUp, Activity, Shield, BarChart, Image } from 'lucide-react';
 
 const AdminDashboard = () => {
   const quickActions = [
     { title: 'Manage Programs', href: '/admin/programs', icon: Activity, color: 'bg-blue-500' },
+    { title: 'Image Gallery', href: '/admin/gallery', icon: Image, color: 'bg-pink-500' },
     { title: 'View Donations', href: '/admin/donations', icon: DollarSign, color: 'bg-green-500' },
     { title: 'Manage Campaigns', href: '/admin/campaigns', icon: TrendingUp, color: 'bg-purple-500' },
     { title: 'Beneficiaries', href: '/admin/beneficiaries', icon: Users, color: 'bg-orange-500' },
