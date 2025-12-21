@@ -17,8 +17,6 @@ const Index = () => {
     { icon: Award, label: 'Years of Service', value: '15+', color: 'text-amber-600' }
   ];
 
-  const upcomingPrograms = programs.filter(p => p.status === 'upcoming').slice(0, 2);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-red-50">
       <Header />
@@ -59,15 +57,16 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                {/* Thiruvannamalai Arunachaleshwarar Temple Gopuram */}
                 <img 
-                  src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop" 
-                  alt="Arunachaleshwarar Temple and community service"
+                  src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&h=600&fit=crop" 
+                  alt="Thiruvannamalai Arunachaleshwarar Temple Gopuram"
                   className="w-full h-[400px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <p className="text-xl font-semibold">Empowering Communities</p>
-                  <p className="text-sm opacity-90">Through devotion, compassion and service</p>
+                  <p className="text-xl font-semibold">Arunachaleshwarar Temple</p>
+                  <p className="text-sm opacity-90">திருவண்ணாமலை - Sacred abode of Lord Shiva</p>
                 </div>
               </div>
             </div>
