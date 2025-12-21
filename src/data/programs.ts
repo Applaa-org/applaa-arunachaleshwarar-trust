@@ -5,13 +5,13 @@ export interface Program {
   description: string;
   fullDescription: string;
   category: 'education' | 'food' | 'healthcare' | 'shelter' | 'emergency';
-  status: 'completed' | 'ongoing' | 'upcoming';
+  status: 'completed' | 'ongoing' | 'upcoming' | 'draft' | 'paused' | 'cancelled';
   image: string;
   gallery: string[];
   date: string;
   location: string;
   beneficiaries: number;
-  beneficiaries_target?: number;
+  beneficiaries_target: number;
   beneficiaries_reached: number;
   fundsRaised: number;
   fundsGoal: number;
@@ -38,7 +38,7 @@ export const programs: Program[] = [
       "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&h=600&fit=crop"
     ],
     date: "2024-01-15",
-    location: "Multiple locations across the city",
+    location: "Multiple locations across Tamil Nadu",
     beneficiaries: 2500,
     beneficiaries_target: 3000,
     beneficiaries_reached: 2500,
@@ -55,7 +55,7 @@ export const programs: Program[] = [
     id: 2,
     title: "Back to School Initiative 2024",
     slug: "back-to-school-2024",
-    description: "Providing school supplies, uniforms, and educational materials to children from low-income families to ensure they start the academic year prepared.",
+    description: "Providing school supplies, uniforms, and educational materials to children from low-income families.",
     fullDescription: "Education is the key to breaking the cycle of poverty. Our Back to School Initiative provides complete educational kits including books, stationery, school bags, uniforms, and shoes to children who otherwise couldn't afford them. We've partnered with 25 schools to identify children in need and ensure they have everything required for a successful academic year.",
     category: 'education',
     status: 'completed',
@@ -84,7 +84,7 @@ export const programs: Program[] = [
     id: 3,
     title: "Free Medical Camp & Health Checkups",
     slug: "free-medical-camp-2024",
-    description: "Organizing free medical checkups, consultations, and medicine distribution for underprivileged communities with limited healthcare access.",
+    description: "Organizing free medical checkups, consultations, and medicine distribution for underprivileged communities.",
     fullDescription: "Healthcare is a fundamental right. Our medical camps bring qualified doctors, nurses, and healthcare professionals to underserved communities. We provide free consultations, basic diagnostics, medicines, and referrals for serious cases. Special focus is given to maternal health, child nutrition, and chronic disease management.",
     category: 'healthcare',
     status: 'upcoming',
@@ -95,7 +95,7 @@ export const programs: Program[] = [
       "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=800&h=600&fit=crop"
     ],
     date: "2024-02-10",
-    location: "Rural Health Center, District 3",
+    location: "Rural Health Center, Thiruvannamalai District",
     beneficiaries: 600,
     beneficiaries_target: 600,
     beneficiaries_reached: 0,
@@ -104,7 +104,7 @@ export const programs: Program[] = [
     impact: [
       "Expected 600+ patients to be served",
       "10+ specialist doctors volunteering",
-      "Free medicines worth $10,000",
+      "Free medicines worth ₹10,00,000",
       "Follow-up care coordination planned"
     ]
   },
@@ -112,7 +112,7 @@ export const programs: Program[] = [
     id: 4,
     title: "Winter Blanket Distribution",
     slug: "winter-blanket-distribution",
-    description: "Distributing warm blankets, winter clothing, and essential supplies to homeless individuals and families during cold winter months.",
+    description: "Distributing warm blankets, winter clothing, and essential supplies to homeless individuals and families.",
     fullDescription: "No one should suffer from the cold. Our winter relief program distributes warm blankets, winter jackets, thermal wear, and hot meals to homeless individuals and families living in vulnerable conditions. We work through the night during extreme cold weather to ensure everyone has access to warmth and shelter.",
     category: 'shelter',
     status: 'completed',
@@ -123,7 +123,7 @@ export const programs: Program[] = [
       "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=800&h=600&fit=crop"
     ],
     date: "2023-12-20",
-    location: "City-wide distribution",
+    location: "City-wide distribution across Tamil Nadu",
     beneficiaries: 1200,
     beneficiaries_target: 1000,
     beneficiaries_reached: 1200,
@@ -168,7 +168,7 @@ export const programs: Program[] = [
     id: 6,
     title: "Women Empowerment & Skill Training",
     slug: "women-empowerment-training",
-    description: "Providing vocational training and skill development programs to help women achieve financial independence and support their families.",
+    description: "Providing vocational training and skill development programs to help women achieve financial independence.",
     fullDescription: "Empowering women transforms entire communities. Our comprehensive skill training program offers courses in tailoring, handicrafts, computer literacy, and entrepreneurship. We provide free training, equipment, and market linkages to help women start their own businesses or find employment, breaking the cycle of poverty.",
     category: 'education',
     status: 'ongoing',
@@ -179,7 +179,7 @@ export const programs: Program[] = [
       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop"
     ],
     date: "2024-01-10",
-    location: "Community Center, Main District",
+    location: "Community Center, Thiruvannamalai",
     beneficiaries: 250,
     beneficiaries_target: 300,
     beneficiaries_reached: 150,
@@ -196,7 +196,7 @@ export const programs: Program[] = [
     id: 7,
     title: "Emergency Flood Relief 2024",
     slug: "emergency-flood-relief",
-    description: "Providing immediate relief supplies, temporary shelter, and rehabilitation support to families affected by recent flooding.",
+    description: "Providing immediate relief supplies, temporary shelter, and rehabilitation support to flood-affected families.",
     fullDescription: "When disaster strikes, immediate response saves lives. Our emergency flood relief provides food, clean water, medicine, temporary shelter materials, and hygiene kits to affected families. We're also helping with home repairs and livelihood restoration so families can rebuild their lives with dignity.",
     category: 'emergency',
     status: 'upcoming',
@@ -223,7 +223,7 @@ export const programs: Program[] = [
     id: 8,
     title: "Elderly Care Program",
     slug: "elderly-care-program",
-    description: "Supporting senior citizens with healthcare, nutrition, and companionship to ensure their dignity and wellbeing in their golden years.",
+    description: "Supporting senior citizens with healthcare, nutrition, and companionship to ensure dignity in their golden years.",
     fullDescription: "Our elders deserve respect and care. This program provides regular health checkups, nutritious meals, essential medicines, and most importantly, companionship to senior citizens who are alone or abandoned. Volunteers spend time with them, organize activities, and ensure they feel valued and loved.",
     category: 'healthcare',
     status: 'ongoing',
