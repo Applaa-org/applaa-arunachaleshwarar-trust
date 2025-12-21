@@ -9,9 +9,10 @@ import { Badge } from '@/components/ui/badge';
 const Index = () => {
   const featuredPrograms = programs.filter(p => p.status === 'ongoing').slice(0, 3);
   
-  // REPLACE THIS URL WITH YOUR ARUNACHALESHWARAR TEMPLE IMAGE URL
-  const templeImageUrl = "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop";
-  // Alternative: If you upload to /public folder, use: "/temple-image.jpg"
+  // USING LOCAL IMAGE FROM PUBLIC FOLDER
+  // Once you upload your temple image to /public folder as 'arunachaleshwarar-temple.jpg'
+  // it will automatically display here
+  const templeImageUrl = "/arunachaleshwarar-temple.jpg";
   
   const stats = [
     { icon: Users, label: 'Lives Impacted', value: '10,234', color: 'text-orange-600', gradient: 'from-orange-500 to-red-500' },
@@ -104,19 +105,20 @@ const Index = () => {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 {/* 
-                  TO CHANGE THE TEMPLE IMAGE:
-                  1. Download Arunachaleshwarar Temple image from Pinterest
-                  2. Save it in the 'public' folder as 'arunachaleshwarar-temple.jpg'
-                  3. Change templeImageUrl above to: "/arunachaleshwarar-temple.jpg"
-                  
-                  OR
-                  
-                  Use any direct image URL and update templeImageUrl variable above
+                  YOUR ARUNACHALESHWARAR TEMPLE IMAGE
+                  Steps to add your image:
+                  1. Save your Pinterest image as 'arunachaleshwarar-temple.jpg'
+                  2. Put it in the 'public' folder of your project
+                  3. Refresh the page - it will show automatically!
                 */}
                 <img 
                   src={templeImageUrl}
                   alt="Arunachaleshwarar Temple Gopuram - திருவண்ணாமலை அருணாசலேஸ்வரர் கோவில்"
                   className="w-full h-[400px] object-cover"
+                  onError={(e) => {
+                    // Fallback to a placeholder if image not found
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
