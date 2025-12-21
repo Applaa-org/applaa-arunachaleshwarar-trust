@@ -11,10 +11,15 @@ export interface Program {
   date: string;
   location: string;
   beneficiaries: number;
+  beneficiaries_target?: number;
+  beneficiaries_reached: number;
   fundsRaised: number;
   fundsGoal: number;
   impact: string[];
 }
+
+export type ProgramCategory = 'education' | 'food' | 'healthcare' | 'shelter' | 'emergency';
+export type ProgramStatus = 'completed' | 'ongoing' | 'upcoming' | 'draft' | 'paused' | 'cancelled';
 
 export const programs: Program[] = [
   {
@@ -35,6 +40,8 @@ export const programs: Program[] = [
     date: "2024-01-15",
     location: "Multiple locations across the city",
     beneficiaries: 2500,
+    beneficiaries_target: 3000,
+    beneficiaries_reached: 2500,
     fundsRaised: 45000,
     fundsGoal: 60000,
     impact: [
@@ -62,6 +69,8 @@ export const programs: Program[] = [
     date: "2024-01-05",
     location: "25 schools across 5 districts",
     beneficiaries: 850,
+    beneficiaries_target: 800,
+    beneficiaries_reached: 850,
     fundsRaised: 125000,
     fundsGoal: 120000,
     impact: [
@@ -88,6 +97,8 @@ export const programs: Program[] = [
     date: "2024-02-10",
     location: "Rural Health Center, District 3",
     beneficiaries: 600,
+    beneficiaries_target: 600,
+    beneficiaries_reached: 0,
     fundsRaised: 28000,
     fundsGoal: 55000,
     impact: [
@@ -109,11 +120,13 @@ export const programs: Program[] = [
     gallery: [
       "https://images.unsplash.com/photo-1516733968668-dbdce39c4651?w=800&h=600&fit=crop",
       "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&h=600&fit=crop"
+      "https://images.unsplash.com/photo-1509099863731-ef4bff19e808?w=800&h=600&fit=crop"
     ],
     date: "2023-12-20",
     location: "City-wide distribution",
     beneficiaries: 1200,
+    beneficiaries_target: 1000,
+    beneficiaries_reached: 1200,
     fundsRaised: 35000,
     fundsGoal: 35000,
     impact: [
@@ -140,6 +153,8 @@ export const programs: Program[] = [
     date: "2024-01-20",
     location: "15 villages in rural areas",
     beneficiaries: 4500,
+    beneficiaries_target: 6000,
+    beneficiaries_reached: 2000,
     fundsRaised: 85000,
     fundsGoal: 150000,
     impact: [
@@ -166,6 +181,8 @@ export const programs: Program[] = [
     date: "2024-01-10",
     location: "Community Center, Main District",
     beneficiaries: 250,
+    beneficiaries_target: 300,
+    beneficiaries_reached: 150,
     fundsRaised: 42000,
     fundsGoal: 75000,
     impact: [
@@ -191,6 +208,8 @@ export const programs: Program[] = [
     date: "2024-02-01",
     location: "Coastal regions (Districts 7-9)",
     beneficiaries: 3000,
+    beneficiaries_target: 3000,
+    beneficiaries_reached: 0,
     fundsRaised: 95000,
     fundsGoal: 200000,
     impact: [
@@ -217,6 +236,8 @@ export const programs: Program[] = [
     date: "2024-01-08",
     location: "3 senior care centers",
     beneficiaries: 180,
+    beneficiaries_target: 200,
+    beneficiaries_reached: 120,
     fundsRaised: 38000,
     fundsGoal: 65000,
     impact: [
@@ -236,7 +257,7 @@ export const categories = [
   { id: 'emergency', name: 'Emergency Relief', color: 'bg-red-500', icon: '🚨' }
 ];
 
-export const getStatusColor = (status: Program['status']) => {
+export const getStatusColor = (status: ProgramStatus) => {
   switch (status) {
     case 'completed':
       return 'bg-green-100 text-green-800';
@@ -244,10 +265,16 @@ export const getStatusColor = (status: Program['status']) => {
       return 'bg-blue-100 text-blue-800';
     case 'upcoming':
       return 'bg-yellow-100 text-yellow-800';
+    case 'draft':
+      return 'bg-gray-100 text-gray-800';
+    case 'paused':
+      return 'bg-orange-100 text-orange-800';
+    case 'cancelled':
+      return 'bg-red-100 text-red-800';
   }
 };
 
-export const getStatusText = (status: Program['status']) => {
+export const getStatusText = (status: ProgramStatus) => {
   switch (status) {
     case 'completed':
       return 'Completed';
@@ -255,5 +282,11 @@ export const getStatusText = (status: Program['status']) => {
       return 'Ongoing';
     case 'upcoming':
       return 'Upcoming';
+    case 'draft':
+      return 'Draft';
+    case 'paused':
+      return 'Paused';
+    case 'cancelled':
+      return 'Cancelled';
   }
 };

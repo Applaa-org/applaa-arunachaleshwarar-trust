@@ -32,6 +32,7 @@ import VolunteerDashboard from "./pages/dashboard/VolunteerDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminDonations from "./pages/admin/AdminDonations";
 import AdminCampaigns from "./pages/admin/AdminCampaigns";
+import AdminPrograms from "./pages/admin/AdminPrograms";
 import AdminBeneficiaries from "./pages/admin/AdminBeneficiaries";
 import AdminCompliance from "./pages/admin/AdminCompliance";
 import AdminReports from "./pages/admin/AdminReports";
@@ -150,6 +151,12 @@ const adminCampaignsRoute = createTanStackRoute({
   component: AdminCampaigns,
 })
 
+const adminProgramsRoute = createTanStackRoute({
+  getParentRoute: () => rootRoute,
+  path: '/admin/programs',
+  component: AdminPrograms,
+})
+
 const adminBeneficiariesRoute = createTanStackRoute({
   getParentRoute: () => rootRoute,
   path: '/admin/beneficiaries',
@@ -186,6 +193,7 @@ const routeTree = rootRoute.addChildren([
   adminDashboardRoute,
   adminDonationsRoute,
   adminCampaignsRoute,
+  adminProgramsRoute,
   adminBeneficiariesRoute,
   adminComplianceRoute,
   adminReportsRoute,
