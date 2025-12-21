@@ -57,10 +57,10 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                {/* South Indian Hindu Temple Gopuram - Dravidian Architecture */}
+                {/* Hindu Temple Gopuram - Tamil Nadu Temple Architecture */}
                 <img 
-                  src="https://images.unsplash.com/photo-1548013146-72479768bada?w=800&h=600&fit=crop" 
-                  alt="Thiruvannamalai Arunachaleshwarar Temple Gopuram - South Indian Temple"
+                  src="https://images.unsplash.com/photo-1609920658906-8223bd289001?w=800&h=600&fit=crop" 
+                  alt="Thiruvannamalai Arunachaleshwarar Temple Gopuram - South Indian Hindu Temple"
                   className="w-full h-[400px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
