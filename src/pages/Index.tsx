@@ -9,6 +9,10 @@ import { Badge } from '@/components/ui/badge';
 const Index = () => {
   const featuredPrograms = programs.filter(p => p.status === 'ongoing').slice(0, 3);
   
+  // REPLACE THIS URL WITH YOUR ARUNACHALESHWARAR TEMPLE IMAGE URL
+  const templeImageUrl = "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&h=600&fit=crop";
+  // Alternative: If you upload to /public folder, use: "/temple-image.jpg"
+  
   const stats = [
     { icon: Users, label: 'Lives Impacted', value: '10,234', color: 'text-orange-600', gradient: 'from-orange-500 to-red-500' },
     { icon: Heart, label: 'Active Programs', value: '12', color: 'text-red-600', gradient: 'from-red-500 to-pink-500' },
@@ -99,9 +103,18 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                {/* Arunachaleshwarar Temple Gopuram - Thiruvannamalai */}
+                {/* 
+                  TO CHANGE THE TEMPLE IMAGE:
+                  1. Download Arunachaleshwarar Temple image from Pinterest
+                  2. Save it in the 'public' folder as 'arunachaleshwarar-temple.jpg'
+                  3. Change templeImageUrl above to: "/arunachaleshwarar-temple.jpg"
+                  
+                  OR
+                  
+                  Use any direct image URL and update templeImageUrl variable above
+                */}
                 <img 
-                  src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&h=600&fit=crop" 
+                  src={templeImageUrl}
                   alt="Arunachaleshwarar Temple Gopuram - திருவண்ணாமலை அருணாசலேஸ்வரர் கோவில்"
                   className="w-full h-[400px] object-cover"
                 />
